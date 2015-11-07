@@ -84,7 +84,10 @@ export function createTransform(position: Object, isSVG: ?boolean) {
 
 export function createCSSTransform({x, y}: {x: number, y: number}) {
   // Replace unitless items with px
-  let out = {transform: 'translate(' + x + 'px,' + y + 'px)'};
+  let out = {
+    left: x + 'px',
+    top:  y + 'px'
+  };
   // Add single prefixed property as well
   if (browserPrefix) {
     out[browserPrefix + 'Transform'] = out.transform;

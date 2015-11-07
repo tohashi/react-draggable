@@ -634,7 +634,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var y = _ref.y;
 	  return (function () {
 	    // Replace unitless items with px
-	    var out = { transform: 'translate(' + x + 'px,' + y + 'px)' };
+	    var out = {
+	      left: x + 'px',
+	      top: y + 'px'
+	    };
 	    // Add single prefixed property as well
 	    if (_getPrefix2['default']) {
 	      out[_getPrefix2['default'] + 'Transform'] = out.transform;
